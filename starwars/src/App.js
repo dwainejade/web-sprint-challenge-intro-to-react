@@ -30,18 +30,14 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <div className="main-container">
-        <div className="characters">
-        {/* <CharacterList
-                name = {people}
-                dob = {people}
-                /> */}
-        </div>
-        <div className="info">
-        
-
-        </div>
-      </div>
+          {people.map((person, i) => {
+            return (
+              <CharacterList
+                key = {i}
+                person = {person}
+              /> 
+            )
+            })}
     </div>
   );
 }

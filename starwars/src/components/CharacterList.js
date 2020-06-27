@@ -1,14 +1,14 @@
 // Write your Character component here
 import React from 'react';
 
-const CharacterList = ({name, birth_year }) => {
+const CharacterList = ({person }) => {
 
     return (
         <div className = 'Character'>
-            <h2>Name: {name}</h2>
-            <h2>DOB: {birth_year}</h2>
+            <h2>Name: {person.name}</h2>
+            <h3>DOB: {person.birth_year}</h3>
         </div>
     );
 };
 
-export default CharacterList
+export default CharacterList;
