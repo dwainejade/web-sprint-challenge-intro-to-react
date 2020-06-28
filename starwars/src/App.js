@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import styled from 'styled-components'
 import CharacterList from './components/CharacterList'
 
 const App = () => {
@@ -30,16 +31,18 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-          {people.map((person, i) => {
-            return (
-              <CharacterList
-                key = {i}
-                person = {person}
-              /> 
-            )
-            })}
+      {people.map((person, i) => {
+        return (
+            <CharacterList
+              key={i}
+              person={person}
+            />
+        )
+      })}
     </div>
   );
 }
+
+
 
 export default App;
